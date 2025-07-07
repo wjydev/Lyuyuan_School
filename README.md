@@ -29,8 +29,8 @@
 
 1.  **克隆仓库**
     ```bash
-    git clone https://github.com/你的用户名/Su_Tang.git
-    cd Su_Tang
+    git clone https://github.com/wjydev/Lyuyuan_School.git
+    cd Lyuyuan_School
     ```
 
 2.  **创建并激活虚拟环境**

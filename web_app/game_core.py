@@ -9,9 +9,18 @@ class SimpleGameCore:
         self.agent = GalGameAgent(is_new_game=True)
 
     def start_new_game(self):
+        """重置游戏状态并返回初始数据"""
         # 2. 响应“开始游戏”请求：它直接告诉AI大脑去初始化。
         self.agent._init_new_game(is_new_game=True)
-        # ...返回初始文本和状态...
+    
+        # 增加返回初始状态的逻辑
+        initial_response = "（你走在热闹的校园里，注意到烘焙社的摊位前有个可爱的女孩正在忙碌着...）" # 或者任何你喜欢的开场白
+        initial_state = self.get_current_state()
+    
+        return {
+            'response': initial_response,
+            'game_state': initial_state
+        }
 
     def chat(self, user_input):
         # 3. 响应“聊天”请求：它把玩家的话直接传给AI大脑，然后把AI的回复拿回来。
